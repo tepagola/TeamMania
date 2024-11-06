@@ -1,5 +1,7 @@
-document.addEventListener('DOMContentLoaded', () => {
+// Función para reproducir música de fondo
+function reproducirMusica() {
     const audio = document.getElementById('background-music');
+    audio.volume = 0.3; // Establece el volumen al 50%
     audio.play().catch(error => {
         console.log('Reproducción de audio bloqueada:', error);
         Swal.fire({
@@ -9,4 +11,4 @@ document.addEventListener('DOMContentLoaded', () => {
             confirmButtonText: 'Aceptar'
         });
     });
-});
+}
