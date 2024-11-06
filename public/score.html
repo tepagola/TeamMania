@@ -21,7 +21,9 @@
 </head>
 
 <body class="bg-dark min-vh-100 d-flex align-items-center justify-content-center"
-  style="font-family: 'Press Start 2P', cursive;">
+  style="font-family: 'Press Start 2P', cursive;" onload="reproducirMusica()">
+  <!-- Audio de fondo del jugo, es TeamMania.mp3 -->
+  <audio id="background-music" src="./sounds/TeamMania.mp3" loop></audio>
   <div class="bg-dark p-5 rounded shadow-lg w-100" style="max-width: 1200px;">
     <h1 class="display-4 text-center text-success mb-5">TeamMania</h1>
     <h2 class="h3 text-center text-success my-4">Score</h2>
@@ -68,6 +70,7 @@
 
   <!-- Script JS -->
   <script src="assets/js/score.js"></script>
+  <script src="./assets/js/main.js"></script>
 </body>
 
 </html>
