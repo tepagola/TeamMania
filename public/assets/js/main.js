@@ -12,3 +12,8 @@ function reproducirMusica() {
         });
     });
 }
+
+// Añadir listeners para diferentes tipos de interacción
+document.addEventListener('click', reproducirMusica);
+document.addEventListener('keydown', reproducirMusica);
+document.addEventListener('touchstart', reproducirMusica);
