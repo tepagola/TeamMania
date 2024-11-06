@@ -1,0 +1,56 @@
+/* styles.css */
+
+/* Fuentes y Familias */
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+body {
+  font-family: 'Press Start 2P', cursive;
+  background-image: url('../../images/fondoApp.gif'); /* Ruta relativa al GIF */
+  background-size: cover; /* Asegura que el GIF cubra toda la pantalla */
+  background-repeat: no-repeat; /* Evita que el GIF se repita */
+  background-position: center center; /* Centra el GIF */
+}
+body::after {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: -1;
+}
+
+/* Colores Personalizados */
+.text-pink {
+  color: #FF007F;
+}
+
+/* Sombras Personalizadas */
+.shadow-neon {
+  box-shadow: 0 0 20px rgba(255, 0, 127, 0.7);
+}
+
+/* Tarjeta de Jugador Asignado */
+.card-asignado {
+  background-color: rgba(0, 0, 0, 0.7);
+  border: 2px solid #fff;
+  border-radius: 10px;
+  padding: 1rem 2rem;
+  color: #fff;
+  font-size: 1.2rem;
+  text-align: center;
+  transition: opacity 0.5s, transform 0.5s;
+}
+
+/* Animación de Desaparición */
+.fade-out {
+  animation: fadeOut 0.5s forwards;
+}
+
+@keyframes fadeOut {
+  to {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+}

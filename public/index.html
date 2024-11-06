@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>TeamMania</title>
+
+  <!-- Google Fonts: Press Start 2P -->
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <link href="assets/css/styles.css" rel="stylesheet">
+
+  <!-- Animate.css (Opcional) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+</head>
+
+<body class="bg-dark min-vh-100 d-flex align-items-center justify-content-center"
+  style="font-family: 'Press Start 2P', cursive;">
+  <!-- Audio de fondo del jugo, es TeamMania.mp3 -->
+  <audio id="background-music" src="./sounds/TeamMania.mp3" loop></audio>
+  <div class="bg-dark p-5 rounded shadow-lg w-100" style="max-width: 1200px;">
+    <h1 class="display-4 text-center text-success mb-5">TeamMania</h1>
+
+    <!-- Formulario de Configuración -->
+    <div id="configuracion" class="bg-secondary bg-opacity-75 p-4 rounded">
+      <div class="mb-4">
+        <label for="numeroEquipos" class="form-label text-pink fw-bold">Número de Equipos:</label>
+        <input type="number" id="numeroEquipos" min="2" required class="form-control bg-dark bg-opacity-50 text-white"
+          placeholder="Ingresa el número de equipos" value="2">
+      </div>
+
+      <div class="mb-4">
+        <label for="nombresJugadores" class="form-label text-pink fw-bold">Nombres de Jugadores:</label>
+        <textarea id="nombresJugadores" rows="6" required class="form-control bg-dark bg-opacity-50 text-white"
+          placeholder="Ingresa los nombres separados por comas o saltos de línea"></textarea>
+      </div>
+
+      <button id="generarEquipos" class="btn btn-warning w-100">Generar Equipos</button>
+    </div>
+
+    <!-- Pantalla de Asignación (Oculta por Defecto) -->
+    <div id="asignacion" class="d-none">
+      <h2 class="h3 text-center text-success my-4">Asignando Jugadores...</h2>
+
+      <!-- Tarjeta de Jugador Asignado -->
+      <div id="jugadorAsignado" class="d-flex justify-content-center align-items-center" style="height: 150px;">
+        <!-- La tarjeta se mostrará aquí dinámicamente -->
+      </div>
+
+      <!-- Lista de Equipos y Miembros -->
+      <!-- <div id="equipos" class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4 mt-4"> -->
+      <div id="equipos" class="row g-4 mt-4">
+        <!-- Tarjetas de equipos aparecerán aquí -->
+      </div>
+
+      <div class="d-flex justify-content-center mt-4">
+        <div class="text-center">
+          <a href="./score" class="btn btn-success btn-lg my-2">JUGAR</a><br>
+          <button id="reiniciarAsignacion" class="btn btn-danger btn-sm">Reelegir equipos</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Sonidos (Opcional) -->
+  <audio id="assign-sound" src="./sounds/assign1.mp3"></audio>
+
+  <!-- GSAP con Integridad Correcta -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" referrerpolicy="no-referrer"></script>
+
+  <!-- SweetAlert2 con Integridad Correcta -->
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+  <!-- Script JS -->
+  <script src="assets/js/script.js"></script>
+  <script src="./assets/js/main.js"></script>
+</body>
+
+</html>
